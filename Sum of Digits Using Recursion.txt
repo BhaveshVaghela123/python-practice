@@ -1,0 +1,14 @@
+def sum_digits(n):
+    if n == 0:
+        return 0
+
+    digit = n % 10
+
+    return digit + sum_digits(n // 10)
+
+
+num = int(input("Enter a number: "))
+
+result = sum_digits(num)
+
+print("Sum of digits =", result)
